@@ -112,26 +112,41 @@ public class FIFO_Page_Replacement_Algorithm {
         System.out.print("Enter your preferred frame size: ");
         int frame= scan.nextInt();
 
-        //Declaration of the reference string size.
-        int ref_size= 20;
+        /* Verification if, the frame size is greater than or equal to 3 (minimum)
+        and lesser than or equal to 5 (maximum). */
+        if (frame<=5 && frame>=3) {
+            //Declaration of the reference string size.
+            int ref_size = 20;
 
-        //Declaration of the array of Reference String and indicates the size of the array is ref_size.
-        int[] ref_page = new int[ref_size];
+            //Declaration of the array of Reference String and indicates the size of the array is ref_size.
+            int[] ref_page = new int[ref_size];
 
-        //For loop is initialized in this block to generate an array automatically with random numbers.
-        for(int i=0; i<ref_size; i++){
+            //For loop is initialized in this block to generate an array automatically with random numbers.
+            for (int i = 0; i < ref_size; i++) {
              /*Random generation numbers (from 0 to 9) will be
             processed within this particular line of code. */
-            ref_page[i]= num.nextInt(9);
-        }
+                ref_page[i] = num.nextInt(9);
+            }
 
          /*Accessing the method with parameters within the class "FIFO_algorithm"
         by using object instantiation. */
-        page.implementation(ref_page, frame);
+            page.implementation(ref_page, frame);
+            //Indicating that the program is ended.
+            System.out.println("------------------");
+            System.out.println("PROGRAM TERMINATED");
+            System.out.println("------------------");
+        }
+        // If the frame size does not meet the qualification, it will display the following: "
+        else{
+            System.out.println("--------------------------");
+            System.out.println("FRAME SIZE - OUT OF BOUNDS");
+            System.out.println("--------------------------");
 
-        //Indicating that the program is ended.
-        System.out.println("------------------");
-        System.out.println("PROGRAM TERMINATED");
-        System.out.println("------------------");
+            //Indicating that the program is ended.
+            System.out.println("------------------");
+            System.out.println("PROGRAM TERMINATED");
+            System.out.println("------------------");
+        }
+
     }
 }
