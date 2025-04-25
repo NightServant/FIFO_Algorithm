@@ -9,8 +9,11 @@ This Java CLI program will serve as a case study requirement for the "Operating 
 -The objective of this project to just implement the FIFO page-replacement algorithm with the Java programming language. The existing software program can be only displayed using the Command-Line Interpreter, indicating the program will not have Graphical User Interface. 
 
 ## Technology Stack:
--**Language**: Java
--**Tools**:
-  -**IDE**: IntelliJ IDEA Community Edition
-  -**Version Control**: GitHub
+- **Language**: Java
+- **Tools**:
+  - **IDE**: IntelliJ IDEA Community Edition
+  - **Version Control**: GitHub
+
+## Installation and Usage:
+
   
