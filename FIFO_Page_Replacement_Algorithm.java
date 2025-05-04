@@ -108,36 +108,32 @@ public class FIFO_Page_Replacement_Algorithm {
         //Declaration of Random class to generate a random from 0 to 9
         Random num = new Random();
 
-        //Indication that the user must enter their preferred frame size for the queue.
-        System.out.print("Enter your preferred frame size: ");
-        int frame= scan.nextInt();
+        //Declaration of Integer Values
+        int attempts = 0;
+        final int m_attempt = 2;
+        int frame = -1;
 
-        /* Verification if, the frame size is greater than or equal to 3 (minimum)
-        and lesser than or equal to 5 (maximum). */
-        if (frame<=5 && frame>=3) {
-            //Declaration of the reference string size.
-            int ref_size = 20;
+        //If the attempt is less than 2, it will execute the following:
+        while (attempts < m_attempt){
+            //Indication that the user must enter their preferred frame size for the queue.
+            System.out.print("Enter your preferred frame size (3 to 5 only): ");
+            frame = scan.nextInt();
 
-            //Declaration of the array of Reference String and indicates the size of the array is ref_size.
-            int[] ref_page = new int[ref_size];
-
-            //For loop is initialized in this block to generate an array automatically with random numbers.
-            for (int i = 0; i < ref_size; i++) {
-             /*Random generation numbers (from 0 to 9) will be
-            processed within this particular line of code. */
-                ref_page[i] = num.nextInt(9);
+            if (frame<=5 && frame>=3) {
+                break; // If the frame size number is valid, the program will exit the loop immediately.
+            }
+            else {
+                attempts ++; // If not, the attempt value will be incremented and...
+                if(attempts < m_attempt) {
+                    // will ask the user to input a number again.
+                    System.out.println("Invalid input, try again.");
+                }
             }
 
-         /*Accessing the method with parameters within the class "FIFO_algorithm"
-        by using object instantiation. */
-            page.implementation(ref_page, frame);
-            //Indicating that the program is ended.
-            System.out.println("------------------");
-            System.out.println("PROGRAM TERMINATED");
-            System.out.println("------------------");
         }
+
         // If the frame size does not meet the qualification, it will display the following: "
-        else{
+         if (frame < 3 || frame > 5){
             System.out.println("--------------------------");
             System.out.println("FRAME SIZE - OUT OF BOUNDS");
             System.out.println("--------------------------");
@@ -146,7 +142,28 @@ public class FIFO_Page_Replacement_Algorithm {
             System.out.println("------------------");
             System.out.println("PROGRAM TERMINATED");
             System.out.println("------------------");
+            return;
         }
 
+        //Declaration of the reference string size.
+        int ref_size = 20;
+
+        //Declaration of the array of Reference String and indicates the size of the array is ref_size.
+        int[] ref_page = new int[ref_size];
+
+        //For loop is initialized in this block to generate an array automatically with random numbers.
+        for (int i = 0; i < ref_size; i++) {
+             /*Random generation numbers (from 0 to 9) will be
+            processed within this particular line of code. */
+            ref_page[i] = num.nextInt(9);
+        }
+         /*Accessing the method with parameters within the class "FIFO_algorithm"
+        by using object instantiation. */
+        page.implementation(ref_page, frame);
+        //Indicating that the program is ended.
+        System.out.println("------------------");
+        System.out.println("PROGRAM TERMINATED");
+        System.out.println("------------------");
+        return;
     }
 }
