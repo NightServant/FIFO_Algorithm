@@ -17,4 +17,4 @@
 ## Installation and Usage:
 - The project is publicly accessible. All you have to do is to download the Java File. Make sure that your computer has an IDE that is capable of running java programs (such as Visual Studio Code, Intelli J, Eclipse etc.).
 
-The link being - https://github.com/Gabby07theProgrammer/FIFO_Algorithm
+The link being - https://github.com/NightServant/FIFO_Algorithm
