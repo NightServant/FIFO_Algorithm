@@ -6,7 +6,11 @@
 - Cervantes, Elijah Gabe C. | NightServant
 
 ## Project Overview:
-- The objective of this project to just implement the FIFO page-replacement algorithm with the Java programming language. The existing software program can be only displayed using the Command-Line Interpreter, indicating the program will not have Graphical User Interface. 
+- The objective of this project to just implement the FIFO page-replacement algorithm with the Java programming language. The existing software program can be only displayed using the Command-Line Interpreter, indicating the program will not have Graphical User Interface.
+
+  ## Output Preview:
+<img width="482" alt="OUTPUT 1 1" src="https://github.com/user-attachments/assets/f1033c80-1265-46f8-97c1-228433a4efa0" />
+<img width="161" alt="OUTPUT 1 2" src="https://github.com/user-attachments/assets/826414aa-19bb-43d2-b30a-1273b08f289c" />
 
 ## Technology Stack:
 - **Language**: Java
